@@ -22,11 +22,10 @@ public class MarkdownParse {
             else if (markdown.indexOf("]", openBracket) == -1){
                 break;
             }
-            // if(markdown.substring(openParen + 1, closeParen).contains(" ")){
-            //     break;
-
-            // }
-            
+            if(markdown.substring(openParen + 1, closeParen).contains(" ")){
+               break;
+            }
+            System.out.println("[a link on the first line]");
         }
 
         return toReturn;
