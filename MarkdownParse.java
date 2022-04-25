@@ -16,10 +16,10 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            
-            else if (markdown.indexOf("]", openBracket) == -1){
+            if ( markdown.indexOf("(", closeBracket) == -1){
                 break;
             }
+            
             if(markdown.substring(openParen + 1, closeParen).contains(" ")){
                break;
             }
